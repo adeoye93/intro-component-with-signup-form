@@ -3,19 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Adeoye Oyekola | Intro component with sign up form</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <main class="container">
@@ -32,21 +23,23 @@
         <form action="" id="form">
           <label for="firstName">
             <input type="text" class="firstName" placeholder="First Name" />
+            <span class="error-message" id="firstName-error">First Name cannot be empty</span>
           </label>
           <label for="lastName">
             <input type="text" class="lastName" placeholder="Last Name" />
+            <span class="error-message" id="lastName-error">Last Name cannot be empty</span>
           </label>
           <label for="email">
             <input type="email" class="email" placeholder="Email" />
+            <span class="error-message" id="email-error">Looks like this is not an email</span>
           </label>
-          <label for="password">
+          <label for="password" class="password-wrapper">
             <input type="password" class="password" placeholder="Password" />
+            <span class="toggle-password">👁️</span>
+            <span class="error-message" id="password-error">Password cannot be empty</span>
           </label>
           <button id="button">Claim your free trial</button>
-          <small
-            >By clicking the button, you are agreeing to our
-            <span> Terms and Services</span></small
-          >
+          <small>By clicking the button, you are agreeing to our <span>Terms and Services</span></small>
         </form>
       </div>
     </main>

@@ -24,6 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem 0; /* Added padding for top and bottom */
 }
 
 .container {
@@ -32,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4rem;
+  padding: 0 1rem; /* Added padding for left and right */
 }
 
 .container-text,
@@ -121,4 +123,102 @@ small span {
   color: var(--red);
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .container-text,
+  .container-form {
+    flex: unset;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url('./images/bg-intro-mobile.png') no-repeat center;
+    background-color: var(--red);
+    background-size: cover;
+    padding: 2rem 1rem; /* Increased padding for top/bottom and left/right */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  input,
+  button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  h4 {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+
+  input,
+  button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  small {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
+  color: var(--red);
+  font-size: 0.85rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
